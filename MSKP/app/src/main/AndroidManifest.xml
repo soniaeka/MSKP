@@ -71,6 +71,41 @@
 
         </activity>
 
+        <activity
+            android:name=".activity.BonusHariActivity"
+            android:label="Bonus hari ini" >
+        </activity>
+
+        <activity
+            android:name=".activity.BonusHisActivity"
+            android:label="Bonus History" >
+        </activity>
+
+        <activity
+            android:name=".activity.BonusTotalActivity"
+            android:label="Bonus Total" >
+        </activity>
+
+        <activity
+            android:name=".activity.TransaksiROActivity"
+            android:label="Transaksi RO" >
+        </activity>
+
+        <activity
+            android:name=".activity.TransferKartuActivity"
+            android:label="Transfer Kartu" >
+        </activity>
+
+        <activity
+            android:name=".activity.KartuActivity"
+            android:label="Kartu" >
+        </activity>
+
+        <activity
+            android:name=".activity.HistoryTRXActivity"
+            android:label="History TRX" >
+        </activity>
+
 
 
     </application>
