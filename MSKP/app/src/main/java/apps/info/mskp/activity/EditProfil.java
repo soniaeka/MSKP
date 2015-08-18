@@ -127,17 +127,17 @@ public class EditProfil extends ActionBarActivity {
     }
     public void asyncJson() {
         pDialog.show();
-        String url = AppConfig.SERVER+"json/updatepmrofil_json.php";
+        String url = AppConfig.SERVER+"json/updateprofil_json.php";
         Map<String, Object> params = new HashMap<String,Object>();
         params.put("id_member",id_member);
         params.put("nama", Ednama.getText().toString());
         params.put("alamat",Edalamat.getText().toString());
         params.put("email",EdEmail.getText().toString());
-        params.put("kota",spinner_kota.getSelectedItem());
+        params.put("kota",spinner_kota.getSelectedItem().toString());
         params.put("hp",EdNoHP.getText().toString());
         params.put("rek_nama",Edbank.getText().toString());
         params.put("rek_no",EdNoRekening.getText().toString());
-        params.put("rek_bank",spinner_bank.getSelectedItem());
+        params.put("rek_bank",spinner_bank.getSelectedItem().toString());
         params.put("rek_cab",EdCabang.getText().toString());
         params.put("waris_nama",EdAhliWaris.getText().toString());
         params.put("waris_hub",EdHubAhliWaris.getText().toString());
@@ -157,7 +157,7 @@ public class EditProfil extends ActionBarActivity {
                     }
                     if (success.equals("1")){
                         showAlertDialog(messages);
-                        asyncJson();
+
                     }else {
                         showAlertDialog(messages);
                     }
@@ -194,7 +194,7 @@ public class EditProfil extends ActionBarActivity {
                         JSONArray data = json.getJSONArray("daftar_kota");
                          for(int i = 0; i < data.length(); i++){
                          JSONObject c = data.getJSONObject(i);
-                         map = new HashMap<String, String>();
+                         map = new HashMap<>();
                          map.put("kota", c.getString("kota"));
                          MyArrList.add(map);
                             /* if(kota.equalsIgnoreCase(c.getString("kota"))){
@@ -207,8 +207,8 @@ public class EditProfil extends ActionBarActivity {
                                 new String[] {"kota"}, new int[] {R.id.txt});
                         spinner_kota.setAdapter(sAdap);
                         for(int i=0;i<MyArrList.size();i++){
-                            Log.i("nilai array",MyArrList.get(i).toString());
-                            if(kota.equals(MyArrList.get(i).toString())){
+                            Log.i("nilai array",MyArrList.get(i).get("kota"));
+                            if(kota.equals(MyArrList.get(i).get("kota"))){
                                 spinner_kota.setSelection(i);
                             }
                         }
