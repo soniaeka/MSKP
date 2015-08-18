@@ -1,0 +1,36 @@
+<resources>
+
+    <style name="MyMaterialTheme" parent="MyMaterialTheme.Base">
+
+    </style>
+
+    <style name="MyMaterialTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:windowBackground">@color/windowBackground</item>
+    </style>
+
+    <style name="edittext_msg" parent="@android:style/Widget.Holo.Light.EditText">
+        <item name="android:textSize">@dimen/txt_14sp</item>
+        <item name="android:textColor">@color/gray_dk</item>
+        <item name="android:textColorHint">@color/gray</item>
+        <item name="android:background">@drawable/edittext_bg</item>
+        <item name="android:paddingLeft">@dimen/pad_5dp</item>
+        <item name="android:paddingRight">@dimen/pad_5dp</item>
+        <item name="android:layout_marginLeft">@dimen/pad_5dp</item>
+        <item name="android:layout_marginRight">@dimen/pad_10dp</item>
+        <item name="android:ems">10</item>
+        <item name="android:inputType">text</item>
+        <item name="android:imeOptions">actionSend</item>
+        <item name="android:imeActionId">100</item>
+    </style>
+    <style name="btn" parent="@android:style/Widget.Holo.Light.Button">
+        <item name="android:minWidth">3.0dip</item>
+        <item name="android:minHeight">3.0dip</item>
+    </style>
+
+</resources>

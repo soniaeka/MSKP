@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/foreground"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:fadingEdge="horizontal"
+
+    >
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+<ScrollView
+        android:id="@+id/svLayout"
+        android:fadingEdge="none"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.70">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/foreground"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/webViewHolder"
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layer_card_background"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Identitas Member"
+                    android:textStyle="bold"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/colorPrimary2"
+                    android:id="@+id/personalinfo"
+                    android:drawableRight="@drawable/users"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/colorPrimary" />
+
+                <!-- NAMA LENGKAP -->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Lengkap"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/nama_member"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:id="@+id/Ednama"
+                    android:layout_marginLeft="6dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:inputType="textEmailAddress"
+                    android:padding="10dp"
+                    android:singleLine="true"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+                <!-- ALAMAT -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Alamat"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/alamat_member"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/Edalamat"
+                    android:layout_marginBottom="10dp"
+
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+
+                <!--  -->
+                <!-- KOTA -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Kota"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/kota_member"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/spinner"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    />
+
+                <!--  -->
+                <!-- EMAIL -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Email"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/email_member"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdEmail"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+
+                <!-- NO HP -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="No HP"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/nohp_member"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdNoHP"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layer_card_background"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Bank Member"
+                    android:textStyle="bold"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/colorPrimary2"
+
+                    android:drawableRight="@drawable/users"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:background="@color/colorPrimary"
+                    />
+
+                <!-- Nama Rekening -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Nama Rekening"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdNamaRekening"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+
+                <!-- BANK -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Bank"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                <Spinner
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_marginBottom="5dip"
+                    android:id="@+id/spinner_bank"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="6dp"
+                    />
+                <!--  -->
+                <!-- No Rekening -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="No Rekening"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdNoRekening"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+
+                <!-- Cabang -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Cabang"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdCabang"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layer_card_background"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Upline Dan Sponsor"
+                    android:textStyle="bold"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/colorPrimary2"
+
+                    android:drawableRight="@drawable/users"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:background="@color/colorPrimary"
+                    />
+
+                <!--Upline -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Upline"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdUpline"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+
+                <!--POSISI -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Posisi"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                     android:layout_marginLeft="6dp"
+                    android:ems="10"
+                    android:id="@+id/EdPosisi"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+                <!-- SPONSOR -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+
+                    android:layout_height="wrap_content"
+                    android:text="sponsor"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdSponsor"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layer_card_background"
+                android:padding="10dp"
+                android:layout_marginTop="10dp">
+
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Data Ahli Waris"
+                    android:textStyle="bold"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginTop="10dip"
+                    android:textColor="@color/colorPrimary2"
+
+                    android:drawableRight="@drawable/users"
+                    />
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="10dp"
+
+                    android:background="@color/colorPrimary"
+                    />
+
+                <!--AHLI WARIS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Ahli Waris"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+                 <EditText
+                    android:layout_width="match_parent"
+                     android:layout_marginLeft="6dp"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdAhliWaris"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint" />
+                <!--  -->
+
+                <!--HUBUNGAN AHLI WARIS -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"
+                    android:layout_height="wrap_content"
+                    android:text="Hubungan Ahli Waris"
+                    android:textSize="@dimen/text_big_size"
+                    android:layout_marginBottom="5dip"
+                    android:textStyle="bold"/>
+
+            <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                    android:inputType="textEmailAddress"
+                    android:ems="10"
+                    android:id="@+id/EdHubAhliWaris"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/input_login"
+                    android:textColorHint="@color/input_login_hint"
+                    android:paddingLeft="10.0dip"
+                    android:paddingRight="10.0dip"/>
+                <!--  -->
+            </LinearLayout>
+            
+            <Button
+                android:id="@+id/btnEditProfil"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:background="@color/colorPrimary"
+                android:text="SIMPAN"
+                android:textColor="@color/windowBackground" />
+         
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

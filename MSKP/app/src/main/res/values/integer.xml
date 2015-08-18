@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="google_play_services_version">6587000</integer>
+    <integer name="abs__max_action_buttons">2</integer>
+    <integer name="BabeWebviewFontSize_ldpi">18</integer>
+    <integer name="BabeWebviewFontSize_mdpi">18</integer>
+    <integer name="BabeWebviewFontSize_hdpi">18</integer>
+    <integer name="BabeWebviewFontSize_xhdpi">18</integer>
+    <integer name="BabeWebviewFontSize_xxhdpi">18</integer>
+    <integer name="newslist_publisher_name_max_char">12</integer>
+</resources>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:fadingEdge="horizontal"
+    android:padding="10dp"
+    android:paddingTop="40dp"
+    android:layout_gravity="center">
+    <ImageView
+        android:layout_marginTop="@dimen/pad_10dp"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:src="@drawable/traininpediaa"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Trainingpedia version 1.0"
+        android:id="@+id/textView"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="www.trainingpedia.info"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Develop by :"
+        android:textColor="@color/primary_dark_material_light"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="soniaekaputri@gmail.com"
+        android:textColor="@color/abc_input_method_navigation_guard"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>
