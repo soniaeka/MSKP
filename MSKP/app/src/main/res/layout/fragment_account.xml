@@ -1,0 +1,68 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="apps.info.mskp.activity.AccountFragment">
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:weightSum="1">
+
+
+
+        <!-- Login Button -->
+
+        <Button
+            android:id="@+id/btnTransRo"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/bg_button"
+
+            android:text="@string/btn_transRo"
+            android:textColor="@color/windowBackground" />
+        <Button
+            android:id="@+id/btnPinTrx"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/bg_button"
+
+            android:text="@string/btn_pinTRX"
+            android:textColor="@color/windowBackground" />
+
+        <Button
+            android:id="@+id/btnKartuId"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/bg_button"
+
+            android:text="@string/btn_kartuId"
+            android:textColor="@color/windowBackground" />
+
+        <Button
+            android:id="@+id/btnTransId"
+            android:layout_width="fill_parent"
+            android:layout_height="50dip"
+            android:layout_marginTop="20dip"
+            android:background="@drawable/bg_button"
+
+            android:text="@string/btn_transID"
+            android:textColor="@color/windowBackground" />
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -75,6 +75,15 @@
 
     </string-array>
 
+    <string name="input_pintrx">PIN TRX</string>
+    <string name="btn_validasi">Validasi</string>
+
+    <string name="account">Account</string>
+    <string name="btn_transRo">Transaksi RO</string>
+    <string name="btn_pinTRX">History PIN TRX</string>
+    <string name="btn_kartuId">Data Kartu ID</string>
+    <string name="btn_transID">Transfer Kartu ID</string>
+
     <string name="sex_prompt">Choose a country</string>
     <string name="title_DataPribadi">Data Pribadi</string>
     <string name="title_DataPenSponsoran">Data PenSponsoran</string>

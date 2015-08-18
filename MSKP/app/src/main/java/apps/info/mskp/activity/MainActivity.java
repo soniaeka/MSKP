@@ -70,11 +70,10 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawerIsL
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         session = new SessionManager(getApplicationContext());
-      //  session.checkLogin();
         if(!session.isLoggedIn()){
-            Intent i = new Intent(this, LoginActivity.class);
+            Intent intent=new Intent(this,LoginActivity.class);
             finish();
-            startActivity(i);
+            startActivity(intent);
         }
         //CEK LOGIN
         HashMap<String, String> user = session.getUserDetails();
@@ -245,12 +244,12 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawerIsL
                     title = getString(R.string.title_DataPenSponsoran);
                     break;
                 case 2:
-                    fragment = new ReferalFragment();
-                    title = getString(R.string.title_provider);
+                    fragment = new BonusFragment();
+                    title = "Data Bonus";
                     break;
                 case 3:
-                    fragment = new DataPribadiFragment();
-                    title = getString(R.string.title_post);
+                    fragment = new AccountFragment();
+                    title = "Data Account";
                     break;
                 case 4:
                     Logout();

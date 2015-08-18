@@ -76,7 +76,7 @@
                 android:paddingLeft="5.0dip"
                 android:paddingTop="5dip"
                 android:paddingRight="5.0dip"
-                android:layout_width="wrap_content"
+                android:layout_width="244dp"
                 android:layout_height="wrap_content"
                 android:textColor="@color/abc_input_method_navigation_guard"
                 android:layout_margin="0.0dip"
