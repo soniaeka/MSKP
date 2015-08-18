@@ -122,47 +122,7 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawerIsL
     }
 
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        if(session.isLoggedIn()){
-            getMenuInflater().inflate(R.menu.menu_main, menu);
 
-            //RelativeLayout badgeLayout = (RelativeLayout) menu.findItem(R.id.action_notification).getActionView();
-
-           // TextView tv = (TextView) badgeLayout.findViewById(R.id.actionbar_notifcation_textview);
-            //tv.setText("20");
-        }else {
-            getMenuInflater().inflate(R.menu.menu_main, menu);
-        }
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-
-
-        if(id==R.id.home){
-            Toast.makeText(getApplicationContext(), "Home action is selected!", Toast.LENGTH_SHORT).show();
-            return true;
-        }
-
-
-
-        if(id==R.id.action_about){
-            showAbout();
-            return true;
-        }
-
-
-        return super.onOptionsItemSelected(item);
-    }
 /*
     private void search(){
         LayoutInflater li = LayoutInflater.from(context);

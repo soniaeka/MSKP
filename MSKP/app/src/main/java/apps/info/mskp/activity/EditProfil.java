@@ -185,7 +185,7 @@ public class EditProfil extends ActionBarActivity {
                         JSONArray data = json.getJSONArray("daftar_kota");
                          for(int i = 0; i < data.length(); i++){
                          JSONObject c = data.getJSONObject(i);
-                         map = new HashMap<String, String>();
+                         map = new HashMap<>();
                          map.put("kota", c.getString("kota"));
                          MyArrList.add(map);
                             /* if(kota.equalsIgnoreCase(c.getString("kota"))){
@@ -198,7 +198,7 @@ public class EditProfil extends ActionBarActivity {
                                 new String[] {"kota"}, new int[] {R.id.txt});
                         spinner_kota.setAdapter(sAdap);
                         for(int i=0;i<MyArrList.size();i++){
-                            if(kota.equalsIgnoreCase(MyArrList.get(i).toString())){
+                            if(kota.equalsIgnoreCase(MyArrList.get(i).get("kota"))){
                                 spinner_kota.setSelection(i);
                             }
                         }
