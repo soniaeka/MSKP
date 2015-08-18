@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
     <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/AccountFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/BonusFragment.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/BonusHariActivity.java" charset="UTF-8" />
@@ -26,3 +26,4 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bonus.xml" charset="UTF-8" />
   </component>
 </project>
+
