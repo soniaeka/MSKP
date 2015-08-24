@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,6 +41,7 @@ public class DataPribadiFragment extends Fragment {
     String id_member;
     private ProgressDialog pDialog;
     Button editProfil,editPassword;
+    String success ,messages;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,16 +69,13 @@ public class DataPribadiFragment extends Fragment {
         aq = new AQuery(getActivity());
 
         getProfilJson();
+        getNotif();
 
         //Edit data
        editProfil = (Button) rootView.findViewById(R.id.btnEditProfil);
        editPassword = (Button) rootView.findViewById(R.id.btnEditPassword);
 
-
-
-
-
-        return rootView;
+       return rootView;
     }
 
     public void getProfilJson() {
@@ -181,6 +180,44 @@ public class DataPribadiFragment extends Fragment {
         });
 
     }
+    public void getNotif() {
+        pDialog.show();
+        String url = AppConfig.SERVER+"json/upgradecinta_cinta.php";
+        Map<String, Object> params = new HashMap<String,Object>();
+        params.put("id_member", id_member);
+        aq.ajax(url,params, JSONObject.class, new AjaxCallback<JSONObject>() {
+            @Override
+            public void callback(String url, JSONObject json, AjaxStatus status) {
+                pDialog.dismiss();
+                if (json != null) {
+                    try {
+
+                        success = json.getString("success");
+                        messages = json.getString("message");
+                        Log.e("error", "nilai sukses=" + success);
+                    } catch (JSONException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+
+                    showAlertDialog(messages);
+
+
+                } else {
+                    // ajax error, show error code
+                    if (status.getCode()==-101){
+                        showAlertDialog("tidak ada koneksi internet");
+                    } else{
+                        Toast.makeText(aq.getContext(),
+                                "Error:" + status.getCode(), Toast.LENGTH_LONG)
+                                .show();
+                    }}
+            }
+
+
+        });
+    }
+
 
     public void showAlertDialog(String message){
 

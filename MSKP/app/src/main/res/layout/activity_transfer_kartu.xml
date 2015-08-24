@@ -1,139 +1,176 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/foreground"
+    android:gravity="top"
     android:orientation="vertical"
-    android:padding="10dp"
-    tools:context="apps.info.mskp.activity.TransferKartuActivity">
-
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="10dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="30dp"
-        android:text="Transfer Kartu Aktivasi"
-        android:textStyle="bold"/>
+    android:fadingEdge="horizontal" >
 
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:weightSum="1">
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/tujuanid"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/pad_50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_comment"
-            android:hint="ID Tujuan Transfer"
-            android:drawableRight="@drawable/ic_username"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint"
-            />
-
-        <EditText
-            android:id="@+id/jmlh_pin"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/pad_50dp"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_comment"
-            android:hint="Jumlah PIN"
-            android:drawableRight="@drawable/ic_username"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint"
-            android:inputType="number"
-            />
-
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
     </LinearLayout>
 
-    <LinearLayout
+    <ScrollView
+        android:id="@+id/svLayout"
+        android:fadingEdge="none"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:weightSum="1">
-
-        <TextView
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="5dp"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.70">
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:gravity="left"
-            android:textSize="25dp"
-            android:textColor="@color/btn_login_bg"
-            android:text="Jenis transfer"
-            android:textStyle="bold"/>
-        <RadioGroup
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/radio_grouptrans">
+            android:layout_height="fill_parent"
+            android:background="@color/foreground"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transfer PIN Join"
-                android:id="@+id/radio_join"
-                android:textColor="@color/abc_primary_text_material_dark"
-                android:onClick="onRadioButtonClicked"/>
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/webViewHolder"
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layer_card_background"
+                android:padding="10dp">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transfer PIN Join Cinta Sejuta Rasa"
-                android:id="@+id/radio_cinta"
-                android:textColor="@color/abc_primary_text_material_dark"
-                android:onClick="onRadioButtonClicked"/>
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="30dp"
+                    android:text="Transfer Kartu Aktivasi"
+                    android:textStyle="bold"/>
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transfer PIN RO"
-                android:id="@+id/radio_ro"
-                android:textColor="@color/abc_primary_text_material_dark"
-                android:onClick="onRadioButtonClicked"/>
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:weightSum="1">
 
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Transfer PIN UPGRADE"
-                android:id="@+id/radio_upgrade"
-                android:textColor="@color/abc_primary_text_material_dark"
-                android:onClick="onRadioButtonClicked"/>
+                    <EditText
+                        android:id="@+id/tujuanid"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/pad_50dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_comment"
+                        android:hint="ID Tujuan Transfer"
+                        android:drawableRight="@drawable/ic_username"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/input_login"
+                        android:textColorHint="@color/input_login_hint"
+                        />
 
-        </RadioGroup>
+                    <EditText
+                        android:id="@+id/jmlh_pin"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/pad_50dp"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_comment"
+                        android:hint="Jumlah PIN"
+                        android:drawableRight="@drawable/ic_username"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/input_login"
+                        android:textColorHint="@color/input_login_hint"
+                        android:inputType="number"
+                        />
 
+                </LinearLayout>
 
-        <Button
-            android:id="@+id/btnTransPin"
-            android:layout_width="fill_parent"
-            android:layout_height="50dip"
-            android:layout_marginTop="20dip"
-            android:background="@drawable/bg_button"
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:weightSum="1">
 
-            android:text="TRANSFER PIN"
-            android:textColor="@color/windowBackground" />
+                    <TextView
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:textSize="25dp"
+                        android:textColor="@color/btn_login_bg"
+                        android:text="Jenis transfer"
+                        android:textStyle="bold"/>
+                    <RadioGroup
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/radio_grouptrans">
 
-    </LinearLayout>
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transfer PIN Join"
+                            android:id="@+id/radio_join"
+                            android:textColor="@color/list_background_pressed"
+                            android:onClick="onRadioButtonClicked"/>
 
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transfer PIN Join Cinta Sejuta Rasa"
+                            android:id="@+id/radio_cinta"
+                            android:textColor="@color/list_background_pressed"
+                            android:onClick="onRadioButtonClicked"/>
 
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transfer PIN RO"
+                            android:id="@+id/radio_ro"
+                            android:textColor="@color/list_background_pressed"
+                            android:onClick="onRadioButtonClicked"/>
 
+                        <RadioButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Transfer PIN UPGRADE"
+                            android:id="@+id/radio_upgrade"
+                            android:textColor="@color/list_background_pressed"
+                            android:onClick="onRadioButtonClicked"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/btnTransPin"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/bg_button"
+                android:text="TRANSFER PIN"
+                android:textColor="@color/windowBackground" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

@@ -1,29 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding" useUTFGuessing="false" native2AsciiForPropertiesFiles="false">
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/AccountFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/BonusFragment.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/BonusHariActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/BonusHisActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/BonusTotalActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/HistoryTRXActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/KartuActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/TransaksiROActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/TransferKartuActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/activity/UpgradeCintaActivity.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/model/HistoryBonus.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/java/apps/info/mskp/model/HistoryTRX.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_account.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bonus_his.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bonus_his2.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_bonus_total.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_history_trx.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_kartu.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_transaksi_ro.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_transfer_kartu.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_upgrade_cinta.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_account.xml" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_bonus.xml" charset="UTF-8" />
-  </component>
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
 </project>
 

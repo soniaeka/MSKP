@@ -30,9 +30,7 @@ public class BonusFragment extends android.support.v4.app.Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -49,7 +47,8 @@ public class BonusFragment extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), BonusHariActivity.class);
-                ceklogin(i);
+                startActivity(i);
+      // ceklogin(i);
             }
         });
 
@@ -57,7 +56,8 @@ public class BonusFragment extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), BonusTotalActivity.class);
-                ceklogin(i);
+                startActivity(i);
+         //   ceklogin(i);
             }
         });
 
@@ -65,7 +65,8 @@ public class BonusFragment extends android.support.v4.app.Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), BonusHisActivity.class);
-                ceklogin(i);
+                startActivity(i);
+           //  ceklogin(i);
             }
         });
 

@@ -4,6 +4,7 @@ package apps.info.mskp.activity;
 import android.app.AlarmManager;
 import android.app.AlertDialog;
 import android.app.PendingIntent;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -17,6 +18,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -27,9 +29,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidquery.AQuery;
+import com.androidquery.callback.AjaxCallback;
+import com.androidquery.callback.AjaxStatus;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.Calendar;
 import java.util.HashMap;
+import java.util.Map;
 
 import apps.info.mskp.R;
 import apps.info.mskp.helper.AppConfig;
@@ -41,7 +49,8 @@ import apps.info.mskp.helper.SessionManager;
 public class MainActivity extends ActionBarActivity implements FragmentDrawerIsLoggedIn.FragmentDrawerListener{
 
     private static String TAG = MainActivity.class.getSimpleName();
-
+    private ProgressDialog pDialog;
+    String success ,messages;
     private Toolbar mToolbar;
     private FragmentDrawerIsLoggedIn drawerIsLoggedIn;
 
@@ -78,7 +87,15 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawerIsL
         //CEK LOGIN
         HashMap<String, String> user = session.getUserDetails();
 
+
       username = user.get(SessionManager.KEY_USERNAME);
+        //Pdialog
+        pDialog = new ProgressDialog(this);
+        pDialog.setMessage("...");
+        pDialog.setIndeterminate(false);
+        pDialog.setCancelable(true);
+
+
 
         aq = new AQuery(this);
             super.onCreate(savedInstanceState);
@@ -294,6 +311,9 @@ public class MainActivity extends ActionBarActivity implements FragmentDrawerIsL
         peringatan.setNeutralButton("OK", null);
         peringatan.show();
     }
+
+
+
 
     /**
      * Async task to load the data from server

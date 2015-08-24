@@ -52,7 +52,8 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), TransaksiROActivity.class);
-                ceklogin(i);
+                //ceklogin(i);
+                startActivity(i);
             }
         });
 
@@ -60,7 +61,8 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), HistoryTRXActivity.class);
-                ceklogin(i);
+                //ceklogin(i);
+                startActivity(i);
             }
         });
 
@@ -68,7 +70,8 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), KartuActivity.class);
-                ceklogin(i);
+               // ceklogin(i);
+                startActivity(i);
             }
         });
 
@@ -76,7 +79,8 @@ public class AccountFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(getActivity(), TransferKartuActivity.class);
-                ceklogin(i);
+                //ceklogin(i);
+                startActivity(i);
             }
         });
 

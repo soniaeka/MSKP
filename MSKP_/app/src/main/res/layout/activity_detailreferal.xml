@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/foreground"
+    android:gravity="top"
+    android:orientation="vertical"
+    android:fadingEdge="horizontal"
+
+    >
+    <LinearLayout
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+    </LinearLayout>
+    <ScrollView
+        android:id="@+id/svLayout"
+        android:fadingEdge="none"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.70">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/foreground"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/webViewHolder"
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="@drawable/layer_card_background"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="@dimen/pad_10dp">
+
+                    <EditText
+                        android:id="@+id/EdKey"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dip"
+                        android:layout_weight="1"
+                        android:background="@drawable/bg_comment"
+                        android:inputType="text"
+
+                        android:singleLine="true"
+                        android:textColor="@color/input_login"
+                        android:textColorHint="@color/input_login_hint" />
+
+                    <Button
+                        android:id="@+id/btnSearch"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50dip"
+                        android:background="@color/colorPrimary"
+                        android:text="CARI"
+                        android:textColor="@color/windowBackground" />
+                    </LinearLayout>
+
+
+
+                <WebView
+                    android:id="@+id/webView1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    />
+
+
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

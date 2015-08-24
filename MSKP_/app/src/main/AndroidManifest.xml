@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="apps.info.mskp" >
+
+    <meta-data android:name="com.google.android.gms.version"
+        android:value="@integer/google_play_services_version"/>
+    <permission
+        android:name="apps.info.mskp.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+
+
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/MyMaterialTheme" >
+
+
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name=".activity.LoginActivity">
+            <intent-filter>
+
+                <action android:name="android.intent.action.mskp" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.EditProfil"
+            android:label="@string/Edit_Profil" >
+
+        </activity>
+
+        <activity
+            android:name=".activity.EditPasswordProfil"
+            android:label="@string/Edit_Password" >
+
+        </activity>
+
+        <activity
+            android:name=".activity.DetailReferalActivity"
+            android:label="@string/Detail_Pensponsoran" >
+
+        </activity>
+
+        <activity
+            android:name=".activity.BonusHariActivity"
+            android:label="Bonus hari ini" >
+        </activity>
+
+        <activity
+            android:name=".activity.BonusHisActivity"
+            android:label="Bonus History" >
+        </activity>
+
+        <activity
+            android:name=".activity.BonusTotalActivity"
+            android:label="Bonus Total" >
+        </activity>
+
+        <activity
+            android:name=".activity.TransaksiROActivity"
+            android:label="Transaksi RO" >
+        </activity>
+
+        <activity
+            android:name=".activity.TransferKartuActivity"
+            android:label="Transfer Kartu" >
+        </activity>
+
+        <activity
+            android:name=".activity.KartuActivity"
+            android:label="Kartu" >
+        </activity>
+
+        <activity
+            android:name=".activity.HistoryTRXActivity"
+            android:label="History TRX" >
+        </activity>
+
+
+
+    </application>
+
+
+</manifest>

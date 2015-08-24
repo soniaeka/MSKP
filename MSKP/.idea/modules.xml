@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/MSKP.iml" filepath="$PROJECT_DIR$/MSKP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trainingpedia.iml" filepath="$PROJECT_DIR$/Trainingpedia.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Trainingpedia 1.0.iml" filepath="$PROJECT_DIR$/Trainingpedia 1.0.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

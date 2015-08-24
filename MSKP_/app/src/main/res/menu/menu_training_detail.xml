@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="apps.info.mskp.activity.TrainingDetailActivity">
+
+    <item
+        android:id="@+id/badge"
+        android:title="@string/action_search"
+        android:orderInCategory="100"
+        android:icon="@drawable/ic_action_communication_messenger"
+        app:actionLayout="@layout/actionbar_bagde_layout"
+        app:showAsAction="always" />
+
+</menu>

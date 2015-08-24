@@ -1,65 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorPrimary"
+    android:background="@color/foreground"
+    android:gravity="top"
     android:orientation="vertical"
-    android:padding="10dp" >
+    android:fadingEdge="horizontal"
 
-    <TextView
-        android:id="@+id/label"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="50dp"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:textSize="30dp"
-        android:text="Laporan Produk RO  (Belanja Ulang)"
-        android:textStyle="bold"/>
-
+    >
     <LinearLayout
-        android:layout_width="fill_parent"
+        android:id="@+id/container_toolbar"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
         android:orientation="vertical"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:weightSum="1">
+        >
 
-        <EditText
-            android:id="@+id/pin_trx"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/pad_50dp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/bg_comment"
-            android:hint="@string/input_pintrx"
-            android:drawableRight="@drawable/ic_username"
-            android:inputType="textEmailAddress"
-            android:padding="10dp"
-            android:singleLine="true"
-            android:textColor="@color/input_login"
-            android:textColorHint="@color/input_login_hint"
-            />
-
-
-
-
-        <!-- Login Button -->
-
-        <Button
-            android:id="@+id/btnValidasi"
-            android:layout_width="fill_parent"
-            android:layout_height="50dip"
-            android:layout_marginTop="20dip"
-            android:background="@drawable/bg_button"
-
-            android:text="@string/btn_validasi"
-            android:textColor="@color/windowBackground" />
-
-
-
-
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
     </LinearLayout>
+    <ScrollView
+        android:id="@+id/svLayout"
+        android:fadingEdge="none"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="0.70">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/foreground"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            >
 
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/webViewHolder"
+            android:fadingEdge="none"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@drawable/layer_card_background"
+            android:padding="10dp">
+
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:textSize="30dp"
+                    android:text="Laporan Produk RO  (Belanja Ulang)"
+                    android:textStyle="bold"/>
+
+
+
+                    <EditText
+                        android:id="@+id/pin_trx"
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/pad_50dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/bg_comment"
+                        android:hint="@string/input_pintrx"
+                        android:drawableRight="@drawable/ic_username"
+                        android:inputType="textEmailAddress"
+                        android:padding="10dp"
+                        android:singleLine="true"
+                        android:textColor="@color/input_login"
+                        android:textColorHint="@color/input_login_hint"
+                        />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnValidasi"
+                android:layout_width="fill_parent"
+                android:layout_height="50dip"
+                android:layout_marginTop="20dip"
+                android:background="@drawable/bg_button"
+                android:text="@string/btn_validasi"
+                android:textColor="@color/windowBackground" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
 </LinearLayout>
+
+

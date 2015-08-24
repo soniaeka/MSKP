@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,7 +28,7 @@ import apps.info.mskp.R;
 import apps.info.mskp.helper.AppConfig;
 import apps.info.mskp.helper.SessionManager;
 
-public class TransaksiROActivity extends Activity {
+public class TransaksiROActivity extends ActionBarActivity {
 
     private Button btnValidasi;
     private ProgressDialog pDialog;
@@ -35,11 +37,24 @@ public class TransaksiROActivity extends Activity {
     AQuery aq;
     String success ,messages;
     SessionManager session;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_transaksi_ro);
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        mToolbar.setNavigationIcon(R.drawable.ic_action_previous_item);
+        mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                finish();
+            }
+        });
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
         btnValidasi=(Button)findViewById(R.id.btnValidasi);
         pin_trx=(EditText) findViewById(R.id.pin_trx);
