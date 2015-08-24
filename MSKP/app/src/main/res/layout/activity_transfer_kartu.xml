@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@color/colorPrimary"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context="apps.info.mskp.activity.TransferKartuActivity">
@@ -92,7 +91,7 @@
                 android:layout_height="wrap_content"
                 android:text="Transfer PIN Join"
                 android:id="@+id/radio_join"
-                android:textColor="@color/abc_primary_text_material_dark"
+                android:textColor="@color/black"
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
@@ -100,7 +99,7 @@
                 android:layout_height="wrap_content"
                 android:text="Transfer PIN Join Cinta Sejuta Rasa"
                 android:id="@+id/radio_cinta"
-                android:textColor="@color/abc_primary_text_material_dark"
+                android:textColor="@color/black"
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
@@ -108,7 +107,7 @@
                 android:layout_height="wrap_content"
                 android:text="Transfer PIN RO"
                 android:id="@+id/radio_ro"
-                android:textColor="@color/abc_primary_text_material_dark"
+                android:textColor="@color/black"
                 android:onClick="onRadioButtonClicked"/>
 
             <RadioButton
@@ -116,7 +115,7 @@
                 android:layout_height="wrap_content"
                 android:text="Transfer PIN UPGRADE"
                 android:id="@+id/radio_upgrade"
-                android:textColor="@color/abc_primary_text_material_dark"
+                android:textColor="@color/black"
                 android:onClick="onRadioButtonClicked"/>
 
         </RadioGroup>
