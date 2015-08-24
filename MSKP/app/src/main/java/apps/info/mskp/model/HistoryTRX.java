@@ -44,9 +44,9 @@ public class HistoryTRX {
 
     @Override
     public String toString() {
-        return "PIN TRX\t:\t"+pin+
-                "\nJenis\t:\t"+jenis+
-                "\nTanggal\t:\t"+tanggal+
-                "\nStatus\t:\t"+status;
+        return "\nPIN TRX\t\t:\t"+pin+
+                "\nJenis\t\t\t\t:\t"+jenis+
+                "\nTanggal\t\t:\t"+tanggal+
+                "\nStatus\t\t\t:\t"+status+"\n";
     }
 }

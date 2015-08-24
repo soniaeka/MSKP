@@ -2,13 +2,17 @@ package apps.info.mskp.activity;
 
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.androidquery.AQuery;
@@ -46,22 +50,30 @@ public class HistoryTRXActivity extends ActionBarActivity {
 
         session = new SessionManager(this);
 
-        ListView lv = (ListView) findViewById(R.id.list_history);
-
-        ArrayAdapter<HistoryTRX> adapter=new ArrayAdapter<HistoryTRX>(this,
-                android.R.layout.simple_list_item_1,list);
-
-        lv.setAdapter(adapter);
-
         pDialog = new ProgressDialog(this);
         pDialog.setMessage("Sedang mengambil data ...");
         pDialog.setIndeterminate(false);
         pDialog.setCancelable(true);
 
-
         aq = new AQuery(this);
 
         asyncJson();
+
+        ListView lv = (ListView) findViewById(R.id.list_history);
+
+        ArrayAdapter<HistoryTRX> adapter=new ArrayAdapter<HistoryTRX>(this,
+                android.R.layout.simple_list_item_1,list){
+
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent) {
+                View view = super.getView(position, convertView, parent);
+                TextView text = (TextView) view.findViewById(android.R.id.text1);
+                text.setTextColor(Color.DKGRAY);
+
+                return view;
+            }
+        };
+        lv.setAdapter(adapter);
 
     }
 
@@ -137,7 +149,7 @@ public class HistoryTRXActivity extends ActionBarActivity {
 
                             JSONArray categoryItemArray2 = json.getJSONArray("jumaktif2");
 
-                            for (int i = 0; i < categoryItemArray.length(); i++) {
+                            for (int i = 0; i < categoryItemArray2.length(); i++) {
 
                                 try {
 
@@ -147,7 +159,6 @@ public class HistoryTRXActivity extends ActionBarActivity {
                                     trx.setTanggal(categoryItemArray2.getJSONObject(i).getString("aktifnya"));
                                     trx.setStatus(categoryItemArray2.getJSONObject(i).getString("status"));
                                     list.add(trx);
-
                                 } catch (JSONException e) {
                                     show(e.toString());
 
