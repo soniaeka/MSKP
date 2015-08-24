@@ -212,11 +212,9 @@ public class EditProfil extends ActionBarActivity {
                                 new String[] {"kota"}, new int[] {R.id.txt});
                         spinner_kota.setAdapter(sAdap);
                         for(int i=0;i<MyArrList.size();i++){
-<<<<<<< HEAD
-                            if(kota.equalsIgnoreCase(MyArrList.get(i).get("kota"))){
-=======
+
                             if(kota.equals(MyArrList.get(i).get("kota"))){
->>>>>>> origin/master
+
                                 spinner_kota.setSelection(i);
                             }
                         }
@@ -251,7 +249,7 @@ public class EditProfil extends ActionBarActivity {
                 pDialog.dismiss();
                 if (json != null) {
                     try {
-                        final ArrayList<HashMap<String, String>> MyArrList = new ArrayList<HashMap<String, String>>();
+                        final ArrayList<HashMap<String, String>> MyArrList = new ArrayList<>();
                         HashMap<String, String> map;
                         JSONArray data = json.getJSONArray("daftar_bank");
                         for(int i = 0; i < data.length(); i++){
